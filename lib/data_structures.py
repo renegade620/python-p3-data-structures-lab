@@ -40,12 +40,23 @@ def print_spicy_foods(spicy_foods):
 print(print_spicy_foods(spicy_foods))
 
 def get_spicy_food_by_cuisine(spicy_foods, cuisine):
-    pass
+    for food in spicy_foods:
+        if food["cuisine"] == cuisine:
+             return food
+    return
+
+print(get_spicy_food_by_cuisine(spicy_foods, "Sichuan"))
+print()
 
 
 def print_spiciest_foods(spicy_foods):
-    pass
+    for food in spicy_foods:
+        level_of_heat = "🌶" * food["heat_level"]
+        if level_of_heat > "🌶🌶🌶🌶🌶":
+             print(f"{food['name']} ({food['cuisine']}) | Heat Level: {level_of_heat}")
+    return "Success"
 
+print(print_spiciest_foods(spicy_foods))
 
 def get_average_heat_level(spicy_foods):
     pass
