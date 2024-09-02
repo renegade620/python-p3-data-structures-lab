@@ -72,4 +72,12 @@ print(get_average_heat_level(spicy_foods))
 
 
 def create_spicy_food(spicy_foods, spicy_food):
-    pass
+    spicy_foods.append(spicy_food)
+    return spicy_foods
+
+spicy_food = {
+    "name": "Griot",
+    "cuisine": "Haitian",
+    "heat_level": 10,
+}
+print(create_spicy_food(spicy_foods, spicy_food))
